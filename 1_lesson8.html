@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+
+</head>
+<body>
+
+    <h2 class="result">Jquery eğitim seti</h2>
+    <p>JQuery ile eventlerin tamamına hakim oluyorum</p>
+    <p>JQuery ile event özellikleri</p>
+    <a href="https://www.google.com">Google</a>
+
+
+    <div style="background-color: darkgoldenrod;">
+        <p>Bu bir paragraf</p>
+        <button type="button">Click me</button>
+    </div>
+
+    <div id="result">
+
+    </div>
+ 
+    <script>
+        $(function(){
+
+            $(document).mousemove(function(event){
+                $("#result").text("X: "+event.pageX+" ,Y: "+event.pageY);
+            });
+
+            $("div").on("click","button",function(event){
+                $(event.delegateTarget).css("background-color","red");
+            });
+
+            $("a").click(function(event){
+                event.preventDefault();
+            });
+        });
+    </script>
+
+</body>
+</html>

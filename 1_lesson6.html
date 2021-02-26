@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+
+</head>
+<body>
+
+    <h2 class="result">Jquery eğitim seti</h2>
+
+    <input type="text" value="Hello JQuery"> <span id="result"></span> <br><br>
+    <button type="button" id="Btn">Click Button</button>
+    <a href="#" id="link">Click Link</a>
+ 
+    <script>
+        $(function(){
+            $("input").select(function(){
+                $("#result").text("Metni seçtiniz.");
+            });
+            
+            $("#link").click(function(){
+                alert("Linke Tıkladın")
+            });
+
+            $("#Btn").click(function(){
+                //$("input").trigger("select");
+                $("#link").trigger("click");
+            });
+        });
+    </script>
+
+</body>
+</html>
