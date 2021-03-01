@@ -24,7 +24,18 @@
     display: none;
 }
 
-p,ol{
-    padding: 25px;
-    border: 1px solid black;
+.color{
+    color: green;
+    font-size: 20px;
+}
+.blue{
+    color: blue;
+}
+.red{
+    color: red;
+}
+
+.important{
+    font-weight: bold;
+    font-size: xx-large;
 }

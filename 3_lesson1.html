@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Lesson 14</title>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+    <h2>Jquery Eğitim Seti</h2>
+
+    <p id="result">Bu paragraf içindeki <b>bold</b> bir metin</p>
+
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show HTML</button>
+    
+    
+    <script>
+        $(function(){
+            $("#btn1").click(function(){
+                alert("Metin text() ile alındı: "+$("#result").text());
+            });
+            $("#btn2").click(function(){
+                alert("Metin html() ile alındı: "+$("#result").html());
+            });
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Lesson 14</title>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+    <h2>Jquery Eğitim Seti</h2>
+
+    <p>
+        <a href="https://www.udemy.com" target="_blank"
+            title="udemy anasayfa">Udemy jquery ders</a>
+    </p>
+
+    <p id="result2"> <b>İçerikler</b>  <i>değişecek</i> </p>
+    <p>Input alanı: <input type="text" id="result3" value="Can canan"></p>
+    <button id="btn">Show Attribute</button>
+    <button id="btn1">Show </button>
+
+
+    <script>
+        $(function(){
+            $("#btn").click(function(){
+                //$("a").attr("href","https://www.youtube.com");
+
+                $("a").attr({
+                    "title": "yeni title",
+                    "href": "https://www.youtube.com"
+                });
+            });
+
+            $("#btn1").click(function(){
+                $("a").attr("href", function(x, getValue){ //callback function
+                    return getValue+"/deneme/test";
+                });
+            });
+            
+        });
+    </script>
+    
+</body>
+</html>
