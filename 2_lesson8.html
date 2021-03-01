@@ -11,17 +11,17 @@
 <body>
 
     <h2 class="result">Jquery eğitim seti</h2>
+    <button type="button" id="stop">Stop</button>
     <div id="divClick">Click</div>
     <div id="panel">Hello JQuery Slide Effect</div>
     
     <script>
         $(function(){
             $("#divClick").click(function(){
-                $("#panel").slideUp(1500, function(){
-                    $(this).slideDown(1500, function(){
-                        $(this).text("İşlem tamamlandı.")
-                    });
-                });
+                $("#panel").slideDown(3000);
+            });
+            $("#stop").click(function(){
+                $("#panel").stop();
             });
         });
     </script>

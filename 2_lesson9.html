@@ -11,17 +11,20 @@
 <body>
 
     <h2 class="result">Jquery eğitim seti</h2>
-    <div id="divClick">Click</div>
-    <div id="panel">Hello JQuery Slide Effect</div>
+    <button type="button">Click</button> <button type="button" id="Btn">No callback</button>
+    <div id="panel1">Hello JQuery Effect Callback</div>
     
     <script>
         $(function(){
-            $("#divClick").click(function(){
-                $("#panel").slideUp(1500, function(){
-                    $(this).slideDown(1500, function(){
-                        $(this).text("İşlem tamamlandı.")
-                    });
+            $("button").click(function(){
+                $("#panel1").hide(2000, function(){
+                    alert("panel1 şu an gizlendi, callback ile");
                 });
+            });
+
+            $("#Btn").click(function(){
+                $("#panel1").hide(2000);
+                alert("panel1 şu an gizlendi, no callback");
             });
         });
     </script>

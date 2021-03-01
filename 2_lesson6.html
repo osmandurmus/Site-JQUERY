@@ -11,16 +11,14 @@
 <body>
 
     <h2 class="result">Jquery eğitim seti</h2>
-    <div id="divClick">Click</div>
-    <div id="panel">Hello JQuery Slide Effect</div>
+    <button type="button">Start</button><br><br>
+    <div class="box2">JQuery</div>
     
     <script>
         $(function(){
-            $("#divClick").click(function(){
-                $("#panel").slideUp(1500, function(){
-                    $(this).slideDown(1500, function(){
-                        $(this).text("İşlem tamamlandı.")
-                    });
+            $("button").click(function(){
+                $("div").animate({
+                    height:'toggle' // you can use show and hide event methods if you wish.
                 });
             });
         });
