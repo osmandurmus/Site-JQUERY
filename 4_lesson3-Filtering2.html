@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Lesson</title>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main3.css">
+
+    <script>
+        $(function(){
+            $("button").click(function(){
+                $("p").not(".demo").css("background-color","darkkhaki"); //filter or not
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <h2>JQuery Lessons</h2>
+
+        <p>1.JQuery Traversing - Filtering</p>
+        <p>2.Divin içindeki ilk paragraf</p>
+        <p class="demo">3.Divin içindeki ikinci ve son paragraf</p>
+        <p class="demo">4.İkinci Divin içindeki ilk paragraf</p>
+        <p>5.İkinci Divin içindeki ikinci ve son paragraf</p>
+
+        <button>click</button>
+
+</body>
+</html>
