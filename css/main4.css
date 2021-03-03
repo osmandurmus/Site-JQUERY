@@ -1,0 +1,67 @@
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: darkred;
+    color: white;
+    padding: 20px;
+}
+.box2{
+    width: 100px;
+    height: 100px;
+    background-color: darkred;
+    color: white;
+    padding: 10px;
+    position: absolute;
+}
+#divClick, #panel{
+    padding: 10px;
+    text-align: center;
+    background-color: darkkhaki;
+    border: 1px solid darkolivegreen;
+}
+#panel{
+    padding: 90px;
+    display: none;
+}
+.color{
+    color: green;
+    font-size: 20px;
+}
+.blue{
+    color: blue;
+}
+.red{
+    color: red;
+}
+
+.important{
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.result{
+    height: 250px;
+    width: 300px;
+    padding: 10px;
+    margin: 3px;
+    border: 6px solid black;
+    background-color: darkkhaki;
+}
+
+.ancestors *, .descendants *, .siblings * {
+    display: block;
+    border: 2px solid #333;
+    color: darkolivegreen;
+    padding: 5px;
+    margin: 15px;
+}
+
+.loading{
+    display: none;
+    width: 69px;
+    height: 89px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 2px;
+}

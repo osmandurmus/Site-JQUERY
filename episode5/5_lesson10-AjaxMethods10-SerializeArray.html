@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Lesson</title>
+
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/main4.css">
+
+
+</head>
+<body>
+
+  <h2>Welcome to my jquery lesson</h2>
+
+  <div id="result"></div><br>
+  <form>
+      İsim: <input type="text" name="firstName" value="Ricardo"><br>
+      Soyad: <input type="text" name="lastName" value="Quaresma"><br>
+  </form>
+  <button>Click</button>
+
+  <script>
+      $(function(){
+           $("button").click(function(){
+               var serializedArray= $("form").serializeArray();
+               $.each(serializedArray, function(indeks, alan){
+                   $("#result").append(alan.name+": "+alan.value+"<br>");
+               })
+           });
+      });
+  </script>
+
+</body>
+</html>

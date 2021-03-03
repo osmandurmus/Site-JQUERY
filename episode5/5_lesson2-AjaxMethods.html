@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Lesson</title>
+
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/main3.css">
+
+
+</head>
+<body>
+  <div>
+      <h2>Welcome to my jquery lesson</h2>
+  </div>
+
+  <p id="result"></p>
+
+  <button>Click</button>
+
+  <script>
+      $(function(){
+        $("button").click(function(){
+          $.ajax({
+            url: "demo2.txt",
+            success: function(result){
+              $("#result").html(result);
+            }
+          });
+
+          $.ajaxPrefilter(function(options, originalOpitons, xhr){
+            //ayar düzenleme işlemleri
+          });
+
+        });
+      });
+  </script>
+
+</body>
+</html>
