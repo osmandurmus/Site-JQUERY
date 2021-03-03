@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Lesson</title>
+
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+<body>
+
+    <h2>Jquery Eğitim Seti</h2>
+
+    <p>JQuery ile element ekleme</p>
+    <p>JQuery ile append kullanımı</p>
+
+    <ol>
+        <li>Javascript</li>
+        <li>JQuery</li>
+        <li>Angular JS</li>
+    </ol>
+
+    <button id="btn1">Append text</button>
+    <button id="btn2">Append list</button>
+    <button id="btn3">Prepend text</button>
+    <button id="btn4">Prepend list</button>
+    <button onclick="appendText()">Append Function</button>
+    <button id="btn5">Insert before order list</button>
+    <button id="btn6">Insert after order list</button>
+    <button onclick="afterText()">Insert After Function</button>
+
+    <script>
+        $(function(){
+            $("#btn1").click(function(){
+                $("p").append("<b>yeni metin</b>");
+            });
+            $("#btn2").click(function(){
+                $("ol").append("<li>Vue JS</li>");
+            });
+
+            $("#btn3").click(function(){
+                $("p").prepend("<b>yeni metin </b>");
+            });
+            $("#btn4").click(function(){
+                $("ol").prepend("<li>Node JS</li>");
+            });
+
+            $("#btn5").click(function(){
+                $("ol").before("<b>Seçtiğin elementin öncesine ekledim</b>");
+            });
+            $("#btn6").click(function(){
+                $("ol").after("<b>Seçtiğin elementin sonrasına ekledim</b>");
+            });
+        });
+
+        function appendText(){
+            var txt1,txt2,txt3;
+            txt1="<p>HTML ile Yeni Metin</p>"; // HTML ile metin oluşturma
+            txt2=$("<p></p>").text("JQuery Yeni Metin"); //JQuery ile metin oluşturma
+            txt3=document.createElement("p"); //DOM ile metin oluşturma (Core Javascript aracılığıyla)
+            txt3.innerHTML="DOM ile Yeni Metin";
+            $("body").append(txt1,txt2,txt3);
+        }
+        function afterText(){
+            var txt1,txt2,txt3;
+            txt1="<b>I</b>"; // HTML ile metin oluşturma
+            txt2=$("<i></i>").text(" love"); //JQuery ile metin oluşturma
+            txt3=document.createElement("b"); //DOM ile metin oluşturma (Core Javascript aracılığıyla)
+            txt3.innerHTML=" JQuery";
+            $("h2").after(txt1,txt2,txt3);
+        }
+    </script>
+    
+    
+</body>
+</html>

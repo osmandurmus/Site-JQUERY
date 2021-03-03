@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Lesson</title>
+
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/main2.css">
+</head>
+<body>
+
+    <h2>Jquery Eğitim Seti</h2>
+
+    <p id="result">JQuery diğer html/css komutları</p>
+
+    <p id="result1" style="color: red;">JQuery diğer komutlar</p>
+
+    <div>
+        JQuery diğer html/csskomutlarıJQuery diğer html/css komutları JQuery diğer html/css komutları
+        JQuery diğer html/css komutları
+    </div>
+
+    <br><br><button>click</button>
+
+    <script>
+        $(function(){
+           $("button").click(function(){
+              alert($("div").scrollTop()+"px"+" "+$("div").scrollLeft()+"px");
+           });
+        });
+    </script>
+    
+</body>
+</html>

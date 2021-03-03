@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Lesson</title>
+
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/main2.css">
+</head>
+<body>
+
+    <h2>Jquery Eğitim Seti</h2>
+
+    <p>JQuery ile element kaldırma</p>
+    <p id="demo">JQuery ile remove kullanımı</p>
+    <p class="color">JQuery ile empty kullanımı</p>
+
+    <div id="result">Bu metne bir class atayacağım</div>
+    <p><button>Remove</button></p>
+    
+    <script>
+        $(function(){
+            $("button").click(function(){
+                $("p").remove(".color, #demo");
+            });
+        });
+    </script>
+    
+</body>
+</html>

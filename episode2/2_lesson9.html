@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Lesson 11</title>
+
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+<body>
+
+    <h2 class="result">Jquery eğitim seti</h2>
+    <button type="button">Click</button> <button type="button" id="Btn">No callback</button>
+    <div id="panel1">Hello JQuery Effect Callback</div>
+    
+    <script>
+        $(function(){
+            $("button").click(function(){
+                $("#panel1").hide(2000, function(){
+                    alert("panel1 şu an gizlendi, callback ile");
+                });
+            });
+
+            $("#Btn").click(function(){
+                $("#panel1").hide(2000);
+                alert("panel1 şu an gizlendi, no callback");
+            });
+        });
+    </script>
+    
+</body>
+</html>

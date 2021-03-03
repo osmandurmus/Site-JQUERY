@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Lesson 11</title>
+
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+<body>
+
+    <h2 class="result">Jquery eğitim seti</h2>
+    <button type="button">Start</button><br><br>
+    <div class="box2" id="box">JQuery</div>
+    
+    <script>
+        $(function(){
+            $("button").click(function(){
+                var mydiv=$("#box");
+                mydiv.animate({left:'200px'},1500);
+                
+                mydiv.animate({height:'300px', opacity:'0.4'},1500);
+                mydiv.animate({width:'300px', opacity:'0.8'},1500);
+
+                mydiv.animate({fontSize:'2em'},1500);
+
+                mydiv.animate({height:'100px', opacity:'0.4'},1500);
+                mydiv.animate({width:'100px', opacity:'0.8'},1500);
+            });
+        });
+    </script>
+    
+</body>
+</html>

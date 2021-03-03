@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Lesson 11</title>
+
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+<body>
+
+    <h2 class="result">Jquery eğitim seti</h2>
+    <div id="div1" class="box">JQuery</div>
+    <button type="button">Click</button>
+    
+    <script>
+        $(function(){
+           $("button").click(function(){
+                $("#div1").fadeOut(2500, function(){ //callback function
+                    $(this).fadeIn(2500, function(){
+                        alert("fadeOut ve fadeIn işlemi tamamlandı.");
+                    });
+                }); 
+           });
+        });
+    </script>
+    
+</body>
+</html>

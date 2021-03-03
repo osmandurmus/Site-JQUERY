@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Lesson</title>
+
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/main3.css">
+
+    <script>
+        $(function(){
+            $("button").click(function(){
+               $("li").slice(2,5).css("color","red");
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <h2>Welcome to My JQuery Lesson</h2>
+
+    <ul class="first">
+        <li class="foo">liste item 1</li>
+        <li>list item 2</li>
+        <li class="bar">list item 3</li>
+        <li class="bar">list item 4</li>
+        <li class="bar">list item 5</li>
+        <li class="bar">list item 6</li>
+    </ul>
+    
+    <button>Click</button>
+
+</body>
+</html>
