@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Lesson</title>
+
+    <script src="../../js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../css/main4.css">
+</head>
+<body>
+    <h2>Welcome to My JQuery Lesson</h2>
+    <p>Jquery ile çeşitli metodlar</p>
+    <button>Click</button>
+    <div id="result">abcd </div>
+
+    <script>
+        $(function(){
+            $("button").click(function(){ 
+                $("div").append("<p>"+$("div").context+"</p>");
+            });
+        });
+    </script>
+</body>
