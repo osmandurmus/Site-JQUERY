@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Lesson</title>
+
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/main5.css">
+</head>
+<body>
+    <div>jquery 101</div>
+    <div>jquery 102</div>
+    <button id="run">Click</button>
+    <button id="run2">Click2</button>
+
+    <script>
+        $(function(){
+            $("#run").click(function(){
+               $("div").replaceWith("<p>p ile değiştirildi</p>"); // tagi ve içeriğini değiştirir.
+            });
+
+            $("#run2").click(function(){
+                $("div").replaceWith(function(){ // içeriği aynı tagi değiştirir.
+                    return "<p>"+$(this).html()+"</p>";
+                });
+             });
+        });
+    </script>
+</body>

@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Lesson</title>
+
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/main5.css">
+</head>
+<body>
+    <div></div>
+    <button id="run">Click</button>
+
+    <script>
+        $(function(){
+            $("#run").click(function(){
+                $.when($.ajax("../episode5/demo.js")).then(Nice,Wrong);
+
+                function Nice(){
+                    $("div").text("İşlem başarılı");
+                }
+
+                function Wrong(){
+                    $("div").text("İşlem başarısız");
+                }
+            });
+
+        });
+    </script>
+</body>

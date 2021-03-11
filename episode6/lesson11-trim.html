@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Lesson</title>
+
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/main4.css">
+</head>
+<body>
+    <h2>Welcome to My JQuery Lesson</h2>
+    
+    <p><input type="text" name="username1" id="username1"></p>
+    <p><input type="text" name="username2" id="username2"></p>
+    <div id="result"></div>
+    <button id="run">Click</button>
+
+    <script>
+        $(function(){
+            $("#run").click(function(){
+                var takeData = $("#username1").val();
+                takeData = $.trim(takeData);
+                $("#username2").val(takeData);
+            });
+        });
+    </script>
+</body>
