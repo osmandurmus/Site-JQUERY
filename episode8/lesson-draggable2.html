@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Lesson</title>
+
+	<script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../css/main8.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+
+</head>
+<body>
+	<h2>jQuery</h2>
+    <div id="box" class="box">
+        <div class="subBox" id="subBox">
+            <div class="title">Title</div>
+            <div class="content">The process is success</div>
+        </div>
+    </div>
+	<script>
+        $(function(){
+            $("#subBox").draggable({
+                containment:"parent",
+                handle:".title",
+                axis:"y"
+
+            });
+        });
+    </script>
+</body>
